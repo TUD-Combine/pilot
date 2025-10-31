@@ -1,0 +1,15 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: e612edff-efec-40dc-864f-dae5d363d19f
+  # title:
+  # description:
+  # keywords: []
+  # authors: []
+  github: https://github.com/TUD-Combine/pilot
+  # To autogenerate a Table of Contents, run "myst init --write-toc"
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
