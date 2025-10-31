@@ -1,0 +1,32 @@
+
+/* Outer grid: links | midden | rechts (gecentreerd) */
+.article.content.article-grid {
+  grid-template-columns: minmax(0,1fr) minmax(0,1200px) minmax(0,2fr) !important;
+}
+
+MAIN (= inner grid) moet óók 3 kolommen hebben
+.article.content.article-grid > .article-grid.col-screen {
+  grid-column: 1 / -1 !important;              /* over het hele outer grid */
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) minmax(0,800px) minmax(0,1fr) !important;
+  column-gap: var(--myst-gap, 1.5rem);         /* optioneel */
+}
+
+/* Alle directe kinderen van MAIN standaard in de middenkolom */
+.article.content.article-grid > .article-grid.col-screen > * {
+  grid-column: 2 / 3 !important;
+}
+
+/* Right-rail elementen naar kolom 3 (desktop) */
+@media (min-width: 1024px) {
+  .article.content.article-grid > .article-grid.col-screen > .col-margin-right,
+  .article.content.article-grid > .article-grid.col-screen > .lg\:col-margin-right {
+    grid-column: 3 / 4 !important;
+    align-self: start;
+  }
+  /* (optioneel) als je ook een linker rail gebruikt */
+  .article.content.article-grid > .article-grid.col-screen > .col-margin-left,
+  .article.content.article-grid > .article-grid.col-screen > .lg\:col-margin-left {
+    grid-column: 1 / 2 !important;
+  }
+}

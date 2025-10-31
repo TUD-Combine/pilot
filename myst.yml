@@ -8,8 +8,14 @@ project:
   # authors: []
   github: https://github.com/TUD-Combine/pilot
   # To autogenerate a Table of Contents, run "myst init --write-toc"
+
+# extends: 
+#   toc_en.yml
+#   toc_nl.yml
+
 site:
   template: book-theme
-  # options:
+  options:
+    # style: custom.css
   #   favicon: favicon.ico
   #   logo: site_logo.png
